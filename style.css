@@ -1,0 +1,109 @@
+/* CMD/CTRL + / for code comments*/
+
+/*property-name: value; */
+body {
+  background-color: black;
+  color: white;
+  background-image: url("sddefault.jpg");
+  height: 1000px;
+  background-repeat: repeat; 
+  background-size: cover;
+  background-position: center top;
+  background-size: contain;
+/*  CHALLENGE: Use Google Font API to install a websafe font */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  margin-top: 80px !important;
+}
+
+h1 {
+  font-size:35px;
+  color: white;
+  text-align: center;
+}
+
+input {
+  height: 25px;
+  width: 200px;
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+}
+
+button {
+  height: 35px;
+  width: 60px;
+  background-color: black;
+  color: white;
+  font-size: 12px;
+  outline: none;
+  border-radius: 10px;
+  transform: translateX(10px)
+}
+
+.instrument {
+  text-align: center;
+  margin-left: -15px;
+  display: none;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  background-image: url(0SZIUqA.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+  margin-top: 15px;
+  margin-left: 15px;
+  display:inline-block;
+  border-radius: 15px;
+}
+
+#chords {
+  background-color: red;
+  transform: rotate(180deg);
+  transition: 0.3s all;
+}
+
+#chords:active {
+  background-color:#3c0303;
+}
+
+#drums {
+  background-color: brown;
+}
+
+#drums:active {
+  background-color: white;
+  transform: rotate(360deg);
+  transition: 0.5s all;
+}
+
+#groove {
+  background-color: darkgreen;
+}
+
+#groove:active {
+  transform: scale(6.18);
+  background-color: transparent;
+    transition: 0.5s;
+}
+
+#vocals {
+  background-color: blue
+}
+
+#vocals:active {
+  transform: translateY(100px);
+}
+
+#air {
+  background-color: aqua;
+  transform: rotate(90deg)
+}
+
+#whoop {
+  background-color: blueviolet
+}

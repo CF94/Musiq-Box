@@ -1,0 +1,60 @@
+<!-- CMD/CTRL + / creates a code comment -->
+<!-- Version of HTML-->
+<!DOCTYPE html>
+<html>
+  <!-- Head tag for Broswer setup information-->
+  <head>
+<!--  charset defines which characters we can use  -->
+    <meta charset="utf-8">
+<!--  This sets the width of our app to match the devices it's being viewd on  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Full screen mode on mobile -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>MyTunes</title>
+<!--  This is a stylesheet link  -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="extra.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <!-- Add your content inside the body tag -->
+  <body>
+    <div class="nav">
+      <h1>MyTunes</h1>
+      <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <a href="about.html"><li><strong>About</strong></li></a>
+            <a href="index.html"><li><strong>Sign Out</strong></li></a>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <section>
+    <p>Tired of messing with Apple and iTunes? Want a quick and easy way to listen to tunes on the go? Download MyTunes today!</p>
+    <p1>Sign up with your email address for access.</p1>
+    <form accept-charset="utf-8" action="https://usebasin.com/f/fc0f5407191a" method="post">
+      <input type="email" id="email" name="email" placeholder="Enter email address" required>
+      <button type="submit"> Submit </button>
+    </form>
+    </section>
+    
+    <div class="instrument">
+      <div class="box" id="chords"> </div>
+      <div class="box" id="drums"></div>
+      <div class="box" id="groove"></div>
+      <div class="box" id="vocals"></div>
+      <div class="box" id="air"></div>
+      <div class="box" id="woop"></div>
+    </div>
+<!--  Javascript goes beneath here  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script-2.js"></script>
+  </body>
+</html>
+<!--  html5doctor.com for tags -->
+<!--  w3schools.com for html examples -->

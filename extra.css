@@ -1,0 +1,291 @@
+/*HTML
+
+Head:
+<!-- Full screen mode on mobile -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+
+Nav:
+<div class="nav">
+<h1>Musiq</h1>
+<nav role="navigation">
+<div id="menuToggle">
+<input type="checkbox" />
+<span></span>
+<span></span>
+<span></span>
+<ul id="menu">
+<a href="about.html"><li>About</li></a>
+<a href="index.html"><li>Sign Out</li></a>
+</ul>
+</div>
+</nav>
+</div>
+
+Audio:
+<audio id="aAudio">
+<source src="a_note.mp3" type="audio/mpeg"></source>
+<audio id="bAudio">
+<source src="b_note.mp3" type="audio/mpeg"></source>
+</audio>
+<audio id="cAudio">
+<source src="c_note.mp3" type="audio/mpeg"></source>
+</audio>
+<audio id="dAudio">
+<source src="d_note.mp3"></source>
+</audio>
+<audio id="eAudio">
+<source src="e_note.mp3" type="audio/mpeg"></source>
+</audio>
+<audio id="fAudio">
+<source src="f_note.mp3" type="audio/mpeg"></source>
+</audio>
+<audio id="gAudio">
+<source src="g_note.mp3" type="audio/mpeg"></source>
+</audio>
+*/
+
+/*Box CSS
+
+#a {
+background-color:aqua;
+border: 3px solid #0080ff;
+}
+
+#a:active {
+background-color:#1988e6;
+}
+
+#b {
+background-color:#ba00ff;
+border: 3px solid #e049da;
+}
+
+#b:active {
+background-color:#b642d9;
+}
+
+#c {
+background-color:greenyellow;
+border: 3px solid #56d656;
+}
+
+#c:active {
+background-color:#31fda7;
+}
+
+#d {
+background-color: orange;
+border: 3px solid #d06b15;
+}
+
+#d:active {
+background-color: #EE432A;
+}
+
+#e {
+background-color:red;
+border: 3px solid #b92929;
+}
+
+#e:active {
+background-color:#ff4e00;
+}
+
+#f {
+background-color: #2FCF74;
+border: 3px solid darkgreen;
+}
+
+#f:active {
+background-color:#2FCF74;
+}
+*/
+
+
+/*Change Menu Colours*/
+.nav {
+  background-color: #8d0f0f;
+}
+
+#menuToggle span {
+  background: #646464;
+}
+
+#menuToggle input:checked ~ span {
+  background: #232323;
+}
+
+#menu {
+  background: #ededed;
+}
+
+a
+{
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+
+a:hover
+{
+  color: tomato;
+}
+
+/*Navigation bar*/
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 65px;
+  z-index: 1;
+  width: 100vw;
+}
+
+/*Hamburger box */
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 20; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+/*
+* Just a quick hamburger
+*/
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  border-radius: 3px;
+  z-index: 10;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    opacity 0.55s ease;
+
+}
+
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+
+/* 
+* Transform all the slices of hamburger
+* into a crossmark.
+*/
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+}
+
+/*
+* But let's hide the middle one.
+*/
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+
+/*
+* Ohyeah and the last one should go the other direction
+*/
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+
+/*
+* Make this absolute positioned
+* at the top left of the screen
+*/
+#menu
+{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  margin: -100px 0 0 -100px;
+  padding: 50px;
+  padding-top: 125px;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+* And let's slide it in from the left
+*/
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+  margin: -100px 0 0 -50px;
+}
+
+/*Fix Section layout*/
+section {
+  margin-top: 60px;
+  height: 100vh;
+}
+
+/*Move header into nav*/
+h1 {
+  position: fixed;
+  top: 0;
+  text-align: center;
+  z-index: 2;
+  height: 65px;
+  width: 100vw;
+  line-height: 65px;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  margin: 0 !important;
+}
+
+/*Remove the remix button*/
+.details-bar.cleanslate {
+  display: none !important;
+}
